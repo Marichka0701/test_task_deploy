@@ -1,0 +1,103 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.footerWrapper {
+  @include flex_center;
+  padding: 50px 0;
+
+  .footer {
+    padding-top: 30px;
+    width: 90%;
+    border-top: 1px solid #D8D8D8;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 80px;
+
+    @include onTablet {
+      justify-content: flex-start;
+    }
+
+    @include onMobileLarge {
+      justify-content: flex-start;
+    }
+
+    @include onMobileMedium {
+      justify-content: flex-start;
+    }
+
+    @include onMobileSmall {
+      justify-content: flex-start;
+    }
+
+    &_title {
+      color: #000;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &_funiro {
+      max-width: 250px;
+      @include flex_column_start;
+      gap: 16px;
+
+      p {
+        text-align: left;
+      }
+
+      &_lineHeight {
+        line-height: 150%;
+      }
+
+      div {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+    }
+
+    &_menu, &_account, &_stayConnected {
+      @include flex_column_start;
+      gap: 16px;
+
+      ul {
+        @include flex_column_start;
+        gap: 16px;
+      }
+    }
+
+    &_stayUpdated {
+      @include flex_column_start;
+      gap: 16px;
+
+      &_form {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+
+        .input {
+          width: 242px;
+          height: 45px;
+          background: #F4F5F7;
+          padding: 10px 11px 12px;
+
+          &::placeholder {
+            font-size: 16px;
+          }
+
+          &:focus, &:not(:placeholder-shown) {
+            font-size: 16px;
+            color: #616161;
+          }
+        }
+
+        .input_btn {
+          background: #E89F71;
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+
+  }
+}

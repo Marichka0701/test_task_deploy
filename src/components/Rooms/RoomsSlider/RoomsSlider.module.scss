@@ -1,0 +1,68 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.slideContainer {
+  position: relative;
+
+  &_info {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    display: flex;
+    align-items: flex-end;
+
+    @include onMobileLarge {
+      display: none;
+    }
+
+    @include onMobileMedium {
+      display: none;
+    }
+
+    @include onMobileSmall {
+      display: none;
+    }
+
+    &_text {
+      max-width: 280px;
+      max-height: 130px;
+      padding: 32px;
+      background: rgba(255, 255, 255, 0.72);
+      @include flex_column_start;
+      gap: 8px;
+      z-index: 100;
+
+      &_one {
+        color: #616161;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      &_two {
+        color: #3A3A3A;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 120%;
+      }
+    }
+
+    &_button {
+      @include flex_center;
+      width: 48px;
+      height: 48px;
+      background: #E89F71;
+      transition: .5s;
+
+      &>img {
+        width: 16px !important;
+        height: 16px !important;
+      }
+
+      &:hover {
+        transition: .5s;
+        background: rgba(232, 159, 113, 0.7);
+      }
+    }
+  }
+
+}

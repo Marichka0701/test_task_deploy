@@ -1,0 +1,84 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.tipsTracksCard {
+  width: 27vw;
+  max-width: 390px;
+  min-width: 220px;
+  @include flex_column_start;
+  transition: .5s;
+
+  @include onMobileLarge {
+    width: 250px;
+    align-items: center;
+  }
+
+  @include onMobileMedium {
+    width: 250px;
+    align-items: center;
+  }
+
+  @include onMobileMedium {
+    width: 250px;
+    align-items: center;
+  }
+
+  @include onMobileSmall {
+    width: 250px;
+    align-items: center;
+  }
+
+  &:hover {
+    transition: .5s;
+    transform: translateY(-15px);
+  }
+
+  &_image > img {
+    width: 27vw;
+    max-width: 390px;
+
+    @include onMobileLarge {
+      width: 250px;
+    }
+
+    @include onMobileMedium {
+      width: 250px;
+    }
+
+    @include onMobileSmall {
+      width: 250px;
+    }
+  }
+
+  &_info {
+    max-width: 390px;
+    padding: 16px;
+    @include flex_column_start;
+    gap: 8px;
+
+    &>h2 {
+      color: #3A3A3A;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 120%;
+
+      @include onMobileLarge {
+        font-size: 20px;
+      }
+
+      @include onMobileMedium {
+        font-size: 20px;
+      }
+
+      @include onMobileSmall {
+        font-size: 20px;
+      }
+    }
+
+    &>p {
+      color: #898989;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.productsContainer {
+  @include flex_center;
+  flex-direction: column;
+  gap: 32px;
+
+  &_title {
+    color: #3A3A3A;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  &_products {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &_button {
+    width: 245px;
+    height: 48px;
+    border: 1px solid #E89F71;
+    background: transparent;
+    transition: .5s;
+
+    color: #E89F71;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+
+    &:hover {
+      transform: scale(.9);
+      transition: .5s;
+      background: #E89F71;
+      color: #FFFFFF;
+    }
+  }
+
+}

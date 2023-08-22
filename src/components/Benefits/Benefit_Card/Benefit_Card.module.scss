@@ -1,0 +1,24 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.benefitCard {
+  @include flex_center;
+  gap: 24px;
+
+  &_info {
+    @include flex_column_start;
+
+    &>p:nth-child(1) {
+      color: #3A3A3A;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    &>p:nth-child(2) {
+      color: #898989;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+}

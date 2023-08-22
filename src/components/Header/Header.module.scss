@@ -1,0 +1,266 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.headerWrapper {
+  width: 100vw;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 10000;
+
+  .header {
+    padding: 40px 100px;
+    @include flex_center;
+    gap: 40px;
+
+    @include onTablet {
+      justify-content: space-between;
+    }
+
+    @include onMobileLarge {
+      padding: 20px 50px;
+      justify-content: space-between;
+    }
+
+    @include onMobileMedium {
+      padding: 20px;
+      justify-content: space-between;
+    }
+
+    @include onMobileSmall {
+      padding: 20px;
+      justify-content: space-between;
+    }
+
+    &_title {
+      color: #000;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .header_nav {
+
+      @include onTablet {
+        background: url("../MainSection/images/background.png");
+        position: fixed;
+        overflow: hidden;
+        top: -100vh;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        z-index: 100;
+        transition: 1s;
+      }
+
+      @include onMobileLarge {
+        background: url("../MainSection/images/background.png");
+        position: fixed;
+        overflow: hidden;
+        top: -100vh;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        z-index: 100;
+        transition: 1s;
+      }
+
+      @include onMobileMedium {
+        background: url("../MainSection/images/background.png");
+        position: fixed;
+        overflow: hidden;
+        top: -100vh;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        z-index: 100;
+        transition: 1s;
+      }
+
+      @include onMobileSmall {
+        background: url("../MainSection/images/background.png");
+        position: fixed;
+        overflow: hidden;
+        top: -100vh;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        z-index: 100;
+        transition: 1s;
+      }
+
+      &_options {
+        @include flex_center;
+        gap: 40px;
+
+        &_form {
+          display: flex;
+          gap: 40px;
+          .select {
+            background: transparent;
+            color: #3A3A3A;
+          }
+        }
+
+        @include onTablet {
+          flex-direction: column-reverse;
+          gap: 20px;
+        }
+
+        @include onMobileLarge {
+          flex-direction: column-reverse;
+          gap: 20px;
+        }
+
+        @include onMobileMedium {
+          flex-direction: column-reverse;
+          gap: 20px;
+        }
+
+        @include onMobileSmall {
+          flex-direction: column-reverse;
+          gap: 20px;
+        }
+
+        &_link {
+          color: #3A3A3A;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 150%;
+        }
+
+        &_form {
+          &>div {
+            position: relative;
+
+            &>input {
+              width: 30vw;
+              height: 45px;
+              padding: 12px 44px;
+
+              line-height: 150%;
+
+              @include onMobileLarge {
+                width: 50vw;
+              }
+
+              @include onMobileMedium {
+                width: 70vw;
+              }
+
+              @include onMobileSmall {
+                width: 70vw;
+              }
+
+              &::placeholder {
+                font-size: 14px;
+              }
+
+              &:focus, &:not(:placeholder-shown) {
+                font-size: 14px;
+                color: #616161;
+              }
+            }
+
+            &>img {
+              position: absolute;
+              top: 12px;
+              left: 12px;
+            }
+          }
+        }
+      }
+
+      &_personal {
+        @include flex_center;
+        gap: 32px;
+      }
+    }
+
+    &_visible {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 32px;
+
+      @include onMobileLarge {
+        gap: 16px;
+      }
+
+      @include onMobileMedium {
+        gap: 16px;
+      }
+
+      @include onMobileSmall {
+        gap: 16px;
+      }
+
+      &_personal {
+        @include flex_center;
+        gap: 32px;
+
+        &>img:nth-child(3) {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+        }
+
+        @include onMobileLarge {
+          gap: 16px;
+        }
+
+        @include onMobileMedium {
+          gap: 16px;
+        }
+
+        @include onMobileSmall {
+          gap: 16px;
+        }
+      }
+    }
+  }
+
+
+  // burger menu
+  .navBtn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+
+    @include onMobileLarge {
+      display: block;
+    }
+
+    @include onMobileMedium {
+      display: block;
+    }
+
+    @include onMobileSmall {
+      display: block;
+    }
+  }
+
+  .navCloseBtn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  .responsiveHeader {
+    transform: translateY(100vh);
+  }
+}

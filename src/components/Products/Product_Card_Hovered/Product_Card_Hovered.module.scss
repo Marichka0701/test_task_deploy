@@ -1,0 +1,66 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.productCardHovered {
+  @include flex_center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 58, 58, 0.7);
+  z-index: 1;
+
+  &>div {
+    @include flex_column_start;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &_button {
+    width: 200px;
+    height: 48px;
+    background: #FFF;
+    transition: .5s;
+
+    color: #E89F71;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+
+    &:hover {
+      transition: .5s;
+      transform: scale(.9);
+      background: #E89F71;
+      color: #FFFFFF;
+    }
+  }
+
+  &_options {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_like, &_share {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      gap: 8px;
+      transition: .5s;
+
+      &:hover {
+        transition: .5s;
+        transform: scale(.9);
+        cursor: pointer;
+      }
+
+      &>p {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 150%;
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+
+.sliderContainer {
+  padding-top: 138px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+
+  @include onMobileLarge {
+    padding: 90px 0 0;
+  }
+
+  &_controllersContainer {
+    display: flex;
+    justify-content: flex-end;
+
+    &_controllers {
+      display: flex;
+      width: 55vw;
+      padding: 0 50px;
+      justify-content: space-between;
+
+      @include onMobileLarge {
+        justify-content: center;
+        width: 100vw;
+      }
+
+      @include onMobileMedium {
+        justify-content: center;
+        width: 100vw;
+      }
+
+      @include onMobileSmall {
+        justify-content: center;
+        width: 100vw;
+      }
+
+      &_buttons {
+        display: flex;
+        gap: 10px;
+
+        @include onMobileLarge {
+          display: none;
+        }
+
+        @include onMobileMedium {
+          display: none;
+        }
+
+        @include onMobileSmall {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  .slider {
+    @include flex_center;
+    gap: 13.8vw;
+    overflow: hidden;
+
+    @include onMobileLarge {
+      gap: 50px;
+    }
+
+    &_item {
+      max-width: 700px;
+      height: 500px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+      @include onMobileLarge {
+        max-width: 500px;
+        max-height: 350px;
+      }
+
+      @include onMobileMedium {
+        max-width: 350px;
+        max-height: 280px;
+      }
+
+      @include onMobileSmall {
+        max-width: 300px;
+        max-height: 200px;
+      }
+
+      & > img {
+        max-width: 700px;
+        height: 500px;
+        object-fit: cover;
+
+        @include onMobileLarge {
+          max-width: 500px;
+          max-height: 350px;
+        }
+
+        @include onMobileMedium {
+          max-width: 350px;
+          max-height: 280px;
+        }
+
+        @include onMobileSmall {
+          max-width: 300px;
+          max-height: 200px;
+        }
+      }
+    }
+  }
+
+  &_next, &_prev {
+    width: 48px;
+    height: 48px;
+    @include flex_center;
+    background: #E89F71;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover, &:active {
+      background: rgba(232, 159, 113, 0.5);
+      transition: .5s;
+    }
+  }
+
+  &_prev {
+    transform: rotate(180deg);
+  }
+
+  &_dots {
+    @include flex_center;
+    gap: 10px;
+
+    &_dot {
+      width: 11px;
+      height: 11px;
+      background: #D8D8D8;
+      border-radius: 50%;
+      cursor: pointer;
+      @include flex_center;
+
+      &_inner {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: #D8D8D8;
+      }
+
+      &.active {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #E89F71;
+        background: transparent;
+
+        & > div {
+          background: #E89F71;
+        }
+      }
+    }
+  }
+}

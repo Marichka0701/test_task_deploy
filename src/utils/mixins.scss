@@ -1,0 +1,35 @@
+@mixin flex_column_start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin onTablet {
+  @media screen and (768px <=width <= 1024px) {
+    @content;
+  }
+}
+
+@mixin onMobileLarge {
+  @media screen and (425px <= width <= 768px) {
+    @content;
+  }
+}
+
+@mixin onMobileMedium {
+  @media screen and (375px <= width <= 425px){
+    @content;
+  }
+}
+
+@mixin onMobileSmall {
+  @media screen and (320px <= width <= 375px){
+    @content;
+  }
+}

@@ -1,0 +1,52 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.furnitureWrapper {
+  padding-top: 44px;
+  overflow-x: hidden;
+
+  &_title {
+    text-align: center;
+    &>p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    &>h2 {
+      color: #3A3A3A;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 120%;
+
+      @include onMobileSmall {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &_furniture {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    &_left, &_right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &_top {
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+      }
+
+      &_bottom {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "src/utils/reset";
+@import "src/utils/mixins";
+
+.benefits {
+  padding: 88px 0;
+  @include flex_center;
+  flex-flow: row wrap;
+  gap: 92px;
+
+  @include onTablet {
+    padding: 50px 30px;
+    justify-content: space-around;
+  }
+
+  @include onMobileLarge {
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  @include onMobileMedium {
+    justify-content: flex-start;
+    padding: 88px 20px;
+    gap: 30px;
+  }
+
+  @include onMobileSmall {
+    justify-content: flex-start;
+    padding: 88px 20px;
+    gap: 30px;
+  }
+}
